@@ -36,7 +36,7 @@ while True:
     request = input(click.style('nlsh> ', 'blue', bold=True))
     prompt += template.format(request)
     result = openai.Completion.create(
-        engine='davinci', prompt=prompt, stop='\n', max_tokens=100, temperature=0.0
+        engine='davinci-codex', prompt=prompt, stop='\n', max_tokens=100, temperature=0.0
     )
 
     command = result.choices[0]['text']
